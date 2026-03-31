@@ -1,0 +1,94 @@
+{
+  "theme_and_archetype": {
+    "domain": "Education & Productivity",
+    "theme": "Light + Dark Mode Toggle",
+    "archetype": "Archetype 3 (Pastel & Soft) mixed with Soft Utility",
+    "vibe": "Focused, approachable, tactile, and optimistic."
+  },
+  "typography": {
+    "fonts": {
+      "heading": "Manrope",
+      "body": "IBM Plex Sans",
+      "mono": "JetBrains Mono"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tight font-extrabold",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-bold",
+      "h3": "text-xl sm:text-2xl font-semibold",
+      "h4": "text-lg sm:text-xl font-medium",
+      "body": "text-base leading-relaxed",
+      "small": "text-sm text-muted-foreground",
+      "label": "text-xs uppercase tracking-[0.2em] font-bold"
+    },
+    "guidelines": "Do not default to bold for headers; mix font weights. Headlines > 32px MUST use tracking-tight."
+  },
+  "colors": {
+    "light_mode": {
+      "background": "#F9FAFB",
+      "surface": "#FFFFFF",
+      "border": "#E5E7EB",
+      "primary": "#F97316",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#10B981",
+      "muted": "#F3F4F6",
+      "muted_foreground": "#6B7280",
+      "accent": "#FEE2E2",
+      "text": "#111827"
+    },
+    "dark_mode": {
+      "background": "#09090B",
+      "surface": "#18181B",
+      "border": "#27272A",
+      "primary": "#FB923C",
+      "primary_foreground": "#09090B",
+      "secondary": "#34D399",
+      "muted": "#27272A",
+      "muted_foreground": "#A1A1AA",
+      "accent": "#4C1D95",
+      "text": "#FAFAFA"
+    },
+    "guidelines": "Ensure text contrast meets APCA/WCAG standards. ALWAYS explicitly set text color on hover. Use primary colors primarily for CTAs."
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "p-2, p-4, p-6, p-8, p-12, p-16",
+    "grid_strategy": "Control Room Grid for dashboards (tight gap-4 or gap-6). Cards span 1, 2, or 3 columns based on data density.",
+    "containers": "Containers with borders must have internal padding (p-6 or p-8) to prevent text collision.",
+    "border_radius": "Rounded-xl (12px) for cards, rounded-lg (8px) for buttons/inputs. Avoid overly soft UI."
+  },
+  "surfaces_and_micro_themes": {
+    "header": "Crystal Glass: backdrop-blur-xl bg-background/80 with a 1px delicate inner stroke (border-border/40). z-50.",
+    "dashboard_cards": "Neumorphism & Clay crispness: Flat background, 1px subtle border, no heavy shadow by default. Hover: slight lift (-translate-y-1) and subtle shadow (shadow-lg).",
+    "pomodoro_timer": "Grid Borders (Technical look): Expose the grid, border-r border-b border-border/40 for focused statistics."
+  },
+  "components_and_interactions": {
+    "shadcn_usage": "Use Shadcn components for interactive logic (Forms, Modals, Inputs, Calendar, Dropdown, Table) but customize styling to fit the theme.",
+    "buttons": "Primary: bg-primary text-primary-foreground hover:bg-primary/90. Secondary: bg-secondary text-secondary-foreground hover:bg-secondary/90.",
+    "hover_states": "All interactive elements MUST have explicit hover states (background AND text color).",
+    "focus_states": "Must have HIGHER contrast. focus:ring-2 focus:ring-primary/50.",
+    "animations": "Framer Motion for micro-interactions. Hover lifts, subtle staggered entrance animations for lists.",
+    "accessibility": "MUST respect prefers-reduced-motion. data-testid attribute is REQUIRED on all interactive and key informational elements."
+  },
+  "media_and_assets": {
+    "icons": "lucide-react for default crisp UI icons.",
+    "image_urls": {
+      "auth_hero": {
+        "url": "https://images.pexels.com/photos/16088727/pexels-photo-16088727.jpeg",
+        "description": "Calm, light-filled workspace with books and greenery. Use on the right/left split side of the Login/Register page."
+      },
+      "ai_generator_bg": {
+        "url": "https://images.unsplash.com/photo-1761623135057-e41b632694f2",
+        "description": "Abstract soft pastel gradient. Use as a subtle, low-opacity background behind the AI Study Plan Generator section."
+      }
+    }
+  },
+  "instructions_to_main_agent": [
+    "Strictly adhere to the color palette. Do not invent new colors outside this system.",
+    "Ensure the theme toggle mechanism robustly applies dark mode classes at the top DOM level.",
+    "Use Manrope for headings and IBM Plex Sans for body text.",
+    "All interactive elements MUST have `data-testid` attributes (e.g., data-testid='login-submit-button').",
+    "Do NOT use 'Inter' for headings.",
+    "Dashboard should utilize Shadcn components (Cards, Progress, Tabs, Charts) stylized cleanly without excessive drop shadows.",
+    "Hero/Auth images must be wrapped securely and respect height limits on mobile (max-h-[80vh]).",
+    "Ensure all forms use Shadcn Form components rather than raw HTML inputs."
+  ]
+}
